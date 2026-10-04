@@ -8,43 +8,44 @@
 
 # ⚡ PARHAM 01 · CLOUDFLARE WORKER
 
-### پنل مدیریت مدرن • راه‌اندازی ساده • Cloudflare API
+### Modern Panel • Simple Setup • Cloudflare API
 
-<a href="#-فارسی"><img src="https://img.shields.io/badge/🇮🇷%20فارسی-ورود-ff2d3d?style=for-the-badge&labelColor=090909"></a>
-<a href="#-english"><img src="https://img.shields.io/badge/🇬🇧%20English-Open-2f81f7?style=for-the-badge&labelColor=090909"></a>
+<br>
+
+<a href="#persian"><img src="https://img.shields.io/badge/🇮🇷%20Persian-OPEN-ff2d3d?style=for-the-badge&labelColor=090909"></a>
+<a href="#english"><img src="https://img.shields.io/badge/🇬🇧%20English-OPEN-2f81f7?style=for-the-badge&labelColor=090909"></a>
 
 <br><br>
 
-<a href="https://t.me/parham_ste01"><img src="https://img.shields.io/badge/Telegram-کانال%20اصلی-ff2d3d?style=for-the-badge&logo=telegram&logoColor=white"></a>
-<a href="https://t.me/+SchgZ4s1dGU4N2Y0"><img src="https://img.shields.io/badge/Telegram-گروه%20پشتیبانی-111111?style=for-the-badge&logo=telegram&logoColor=white"></a>
+<a href="https://t.me/parham_ste01"><img src="https://img.shields.io/badge/Telegram%20Channel-OPEN-ff2d3d?style=for-the-badge&logo=telegram&logoColor=white&labelColor=090909"></a>
+<a href="https://t.me/+SchgZ4s1dGU4N2Y0"><img src="https://img.shields.io/badge/Support%20Group-OPEN-2f81f7?style=for-the-badge&logo=telegram&logoColor=white&labelColor=090909"></a>
 
 </div>
 
 ---
 
-<a id="-فارسی"></a>
+<a id="persian"></a>
 
-# 🇮🇷 فارسی
+# 🇮🇷 Persian
 
-<a href="#-english">🇬🇧 رفتن به بخش English</a>
+<a href="#english">🇬🇧 English</a>
 
-## ✦ فهرست آموزش‌ها
+## ✦ Guide
 
-| # | آموزش |
+| # | Guide |
 |---:|---|
-| 01 | ساخت حساب Cloudflare |
-| 02 | ساخت Worker |
-| 03 | قرار دادن `worker.js` |
-| 04 | Deploy کردن Worker |
-| 05 | اولین ورود و ثبت‌نام |
-| 06 | ورود به پنل |
-| 07 | اتصال Cloudflare API |
-| 08 | ساخت خودکار D1 و KV از بخش API |
-| 09 | قابلیت‌های اصلی پنل |
-| 10 | رفع خطاهای رایج |
-| 11 | حمایت از پروژه ❤️ |
+| 01 | <a href="#fa-01">Create a Cloudflare Worker</a> |
+| 02 | <a href="#fa-02">Deploy the Worker</a> |
+| 03 | <a href="#fa-03">First Registration</a> |
+| 04 | <a href="#fa-04">Open the Panel</a> |
+| 05 | <a href="#fa-05">Cloudflare API</a> |
+| 06 | <a href="#fa-06">Main Panel Features</a> |
+| 07 | <a href="#fa-07">Common Fixes</a> |
+| 08 | <a href="#fa-08">Support</a> |
 
 ---
+
+<a id="fa-01"></a>
 
 # 🚀 01 — ساخت Worker
 
@@ -78,11 +79,13 @@ parham-panel
 
 ### مرحله ۴
 
-وارد **Edit code** شو.
+برو داخل **Edit code**.
 
 کد پیش‌فرض را پاک کن.
 
-حالا فایل <a href="https://github.com/parham-01/free-vpn-cludflare/blob/main/worker.js"><b>worker.js</b></a> را باز کن، کل کد را Copy کن و داخل **Edit code** قرار بده.
+فایل <a href="https://github.com/parham-01/free-vpn-cludflare/blob/main/worker.js"><b>worker.js</b></a> را باز کن، کل کد را Copy کن و داخل **Edit code** قرار بده.
+
+<a href="https://github.com/parham-01/free-vpn-cludflare/blob/main/worker.js"><img src="https://img.shields.io/badge/View%20worker.js-2f81f7?style=for-the-badge&labelColor=090909"></a>
 
 ### مرحله ۵
 
@@ -92,25 +95,21 @@ parham-panel
 Save and Deploy
 ```
 
----
+<a id="fa-02"></a>
 
-# ⚠️ بعد از ساخت Worker
+# ⚡ 02 — Deploy و ورود به پنل
 
-بعد از اینکه Worker ساخته و Deploy شد، **حتماً در آخر آدرس Worker این را بنویس:**
-
-```text
-/panel/
-```
-
-مثلاً:
+بعد از اینکه Worker ساخته و Deploy شد، آدرس Worker را باز کن و **آخر آدرس `/panel/` را بنویس.**
 
 ```text
 https://YOUR-WORKER.workers.dev/panel/
 ```
 
----
+> **مهم:** بعد از ساخت Worker مستقیماً وارد `/panel/` شو.
 
-# 👤 02 — اولین ورود
+<a id="fa-03"></a>
+
+# 👤 03 — اولین ورود و ثبت‌نام
 
 ```text
 /panel/
@@ -124,11 +123,25 @@ https://YOUR-WORKER.workers.dev/panel/
 ورود به پنل
 ```
 
----
+ثبت‌نام انجام می‌شود و بعد از آن رمز پنل را تعیین می‌کنی.
 
-# ☁️ 03 — Cloudflare API
+<a id="fa-04"></a>
 
-بعد از ساخت Worker و ورود به پنل برو به:
+# 🔐 04 — ورود به پنل
+
+بعد از تعیین رمز، با همان رمز وارد پنل می‌شوی.
+
+آدرس:
+
+```text
+https://YOUR-WORKER.workers.dev/panel/
+```
+
+<a id="fa-05"></a>
+
+# ☁️ 05 — Cloudflare API
+
+بعد از ورود به پنل برو به:
 
 ```text
 Panel → API
@@ -136,13 +149,13 @@ Panel → API
 
 راهنمای ساخت و اتصال **Cloudflare API** داخل همین بخش قرار دارد.
 
-از همین قسمت برای راه‌اندازی منابع موردنیاز مثل **D1 و KV** استفاده کن.
+از قسمت API می‌توانی تنظیمات و منابع موردنیاز مثل **D1 و KV** را انجام بدهی.
 
 > 🔐 **API Token خودت را برای شخص دیگری ارسال نکن.**
 
----
+<a id="fa-06"></a>
 
-# ⚙️ 04 — قابلیت‌های اصلی پنل
+# ⚙️ 06 — قابلیت‌های اصلی پنل
 
 - ◉ Dashboard و وضعیت سیستم
 - ◉ ساخت و مدیریت Configuration
@@ -152,14 +165,12 @@ Panel → API
 - ◉ مدیریت Worker و Update
 - ◉ اعلان‌ها
 - ◉ تنظیمات پنل
-- ◉ مشاهده وضعیت مصرف و منابع
+- ◉ وضعیت مصرف و منابع
 - ◉ Subscription و QR کانفیگ‌ها
 
----
+<a id="fa-07"></a>
 
-# 🛠️ 05 — اگر چیزی کار نکرد
-
-این موارد را بررسی کن:
+# 🛠️ 07 — اگر چیزی کار نکرد
 
 ```text
 1. worker.js کامل قرار گرفته باشد
@@ -169,57 +180,48 @@ Panel → API
 5. مراحل API را کامل کرده باشی
 ```
 
----
+<a id="fa-08"></a>
 
-# ❤️ حمایت از پروژه
+# ❤️ 08 — حمایت از پروژه
 
 <div align="center">
 
 ## اگر پروژه برات مفید بود، حمایت فراموش نشه ❤️
 
-### 🔥 کانال تلگرام
-
-<a href="https://t.me/parham_ste01">
-<img src="https://img.shields.io/badge/🚀%20ورود%20به%20کانال-ff2d3d?style=for-the-badge&labelColor=090909">
-</a>
+<a href="https://t.me/parham_ste01"><img src="https://img.shields.io/badge/Telegram%20Channel-OPEN-ff2d3d?style=for-the-badge&logo=telegram&logoColor=white&labelColor=090909"></a>
 
 <br><br>
 
-### 💬 گروه پشتیبانی
-
-<a href="https://t.me/+SchgZ4s1dGU4N2Y0">
-<img src="https://img.shields.io/badge/💬%20ورود%20به%20گروه-2f81f7?style=for-the-badge&labelColor=090909">
-</a>
+<a href="https://t.me/+SchgZ4s1dGU4N2Y0"><img src="https://img.shields.io/badge/Support%20Group-OPEN-2f81f7?style=for-the-badge&logo=telegram&logoColor=white&labelColor=090909"></a>
 
 </div>
 
 ---
 
-<a id="-english"></a>
+<a id="english"></a>
 
 # 🇬🇧 English
 
-<a href="#-فارسی">🇮🇷 Go to Persian</a>
+<a href="#persian">🇮🇷 Persian</a>
 
 ## ✦ Guide
 
 | # | Guide |
 |---:|---|
-| 01 | Create a Cloudflare account |
-| 02 | Create a Worker |
-| 03 | Add `worker.js` |
-| 04 | Deploy the Worker |
-| 05 | First registration |
-| 06 | Open the panel |
-| 07 | Connect Cloudflare API |
-| 08 | Create D1 and KV from the API section |
-| 09 | Main panel features |
-| 10 | Common fixes |
-| 11 | Support the project ❤️ |
+| 01 | <a href="#en-01">Create a Cloudflare Worker</a> |
+| 02 | <a href="#en-02">Deploy the Worker</a> |
+| 03 | <a href="#en-03">First Registration</a> |
+| 04 | <a href="#en-04">Open the Panel</a> |
+| 05 | <a href="#en-05">Cloudflare API</a> |
+| 06 | <a href="#en-06">Main Panel Features</a> |
+| 07 | <a href="#en-07">Common Fixes</a> |
+| 08 | <a href="#en-08">Support</a> |
 
 ---
 
-# 🚀 01 — Create the Worker
+<a id="en-01"></a>
+
+# 🚀 01 — Create a Cloudflare Worker
 
 ### Step 1
 
@@ -233,7 +235,7 @@ Go to:
 Workers & Pages
 ```
 
-Then:
+Then click:
 
 ```text
 Create → Worker
@@ -241,7 +243,9 @@ Create → Worker
 
 ### Step 3
 
-Choose a Worker name, for example:
+Choose a Worker name.
+
+Example:
 
 ```text
 parham-panel
@@ -249,9 +253,13 @@ parham-panel
 
 ### Step 4
 
-Open **Edit code** and remove the default code.
+Open **Edit code**.
 
-Open <a href="https://github.com/parham-01/free-vpn-cludflare/blob/main/worker.js"><b>worker.js</b></a>, copy all of its code and paste it into the Worker editor.
+Delete the default code.
+
+Open <a href="https://github.com/parham-01/free-vpn-cludflare/blob/main/worker.js"><b>worker.js</b></a>, copy the complete code and paste it into **Edit code**.
+
+<a href="https://github.com/parham-01/free-vpn-cludflare/blob/main/worker.js"><img src="https://img.shields.io/badge/View%20worker.js-2f81f7?style=for-the-badge&labelColor=090909"></a>
 
 ### Step 5
 
@@ -261,19 +269,21 @@ Click:
 Save and Deploy
 ```
 
----
+<a id="en-02"></a>
 
-# ⚠️ After creating the Worker
+# ⚡ 02 — Deploy and Open the Panel
 
-After the Worker is created and deployed, **add `/panel/` to the Worker URL:**
+After the Worker is created and deployed, open the Worker URL and **add `/panel/` at the end.**
 
 ```text
 https://YOUR-WORKER.workers.dev/panel/
 ```
 
----
+> **Important:** After creating the Worker, go directly to `/panel/`.
 
-# 👤 02 — First Login
+<a id="en-03"></a>
+
+# 👤 03 — First Registration
 
 ```text
 /panel/
@@ -284,30 +294,40 @@ Automatic registration
    ↓
 Set password
    ↓
-Login
-   ↓
-Panel
+Login to the panel
 ```
 
----
+Registration is completed automatically. After that, set your panel password.
 
-# ☁️ 03 — Cloudflare API
+<a id="en-04"></a>
 
-After creating the Worker and opening the panel, go to:
+# 🔐 04 — Open the Panel
+
+After setting your password, use it to log in.
+
+```text
+https://YOUR-WORKER.workers.dev/panel/
+```
+
+<a id="en-05"></a>
+
+# ☁️ 05 — Cloudflare API
+
+After logging in, go to:
 
 ```text
 Panel → API
 ```
 
-The API section contains the instructions for creating and connecting the **Cloudflare API**.
+The **Cloudflare API** setup guide is available inside this section.
 
-Use this section to set up required resources such as **D1 and KV**.
+Use the API section to configure required resources such as **D1 and KV**.
 
 > 🔐 **Never share your API Token with anyone.**
 
----
+<a id="en-06"></a>
 
-# ⚙️ 04 — Main Panel Features
+# ⚙️ 06 — Main Panel Features
 
 - ◉ Dashboard and system status
 - ◉ Configuration management
@@ -320,37 +340,31 @@ Use this section to set up required resources such as **D1 and KV**.
 - ◉ Usage and resource status
 - ◉ Subscription and configuration QR codes
 
----
+<a id="en-07"></a>
 
-# 🛠️ 05 — Common Fixes
-
-Check these first:
+# 🛠️ 07 — Common Fixes
 
 ```text
-1. worker.js was pasted completely
-2. Save and Deploy was completed
-3. /panel/ was added after creating the Worker
-4. The API section was opened
-5. The API setup was completed
+1. Make sure the complete worker.js was pasted
+2. Click Save and Deploy
+3. Open /panel/ after creating the Worker
+4. Open the API section inside the panel
+5. Complete the API setup
 ```
 
----
+<a id="en-08"></a>
 
-# ❤️ Support the Project
+# ❤️ 08 — Support
 
 <div align="center">
 
 ## If this project helped you, please support it ❤️
 
-<a href="https://t.me/parham_ste01">
-<img src="https://img.shields.io/badge/🚀%20Telegram%20Channel-ff2d3d?style=for-the-badge&labelColor=090909">
-</a>
+<a href="https://t.me/parham_ste01"><img src="https://img.shields.io/badge/Telegram%20Channel-OPEN-ff2d3d?style=for-the-badge&logo=telegram&logoColor=white&labelColor=090909"></a>
 
 <br><br>
 
-<a href="https://t.me/+SchgZ4s1dGU4N2Y0">
-<img src="https://img.shields.io/badge/💬%20Support%20Group-2f81f7?style=for-the-badge&labelColor=090909">
-</a>
+<a href="https://t.me/+SchgZ4s1dGU4N2Y0"><img src="https://img.shields.io/badge/Support%20Group-OPEN-2f81f7?style=for-the-badge&logo=telegram&logoColor=white&labelColor=090909"></a>
 
 </div>
 
@@ -362,6 +376,6 @@ Check these first:
 
 `Cloudflare Worker • API • Panel`
 
-❤️ حمایت فراموش نشه
+❤️ Thank you for supporting the project.
 
 </div>
