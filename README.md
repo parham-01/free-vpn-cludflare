@@ -1,6 +1,6 @@
 <div align="center">
 
-<a href="https://github.com/parham-01/free-vpn-cludflare/tree/main/banner">
+<a href="https://github.com/parham-01/free-vpn-cludflare/blob/main/banner/banner.jpg">
 <img src="https://raw.githubusercontent.com/parham-01/free-vpn-cludflare/main/banner/banner.jpg" alt="Parham 01 Banner" width="100%">
 </a>
 
@@ -8,7 +8,12 @@
 
 # ⚡ PARHAM 01 · CLOUDFLARE WORKER
 
-### پنل مدیریت مدرن • راه‌اندازی ساده • اتصال Cloudflare API
+### پنل مدیریت مدرن • راه‌اندازی ساده • Cloudflare API
+
+<a href="#-فارسی"><img src="https://img.shields.io/badge/🇮🇷%20فارسی-ورود-ff2d3d?style=for-the-badge&labelColor=090909"></a>
+<a href="#-english"><img src="https://img.shields.io/badge/🇬🇧%20English-Open-2f81f7?style=for-the-badge&labelColor=090909"></a>
+
+<br><br>
 
 <a href="https://t.me/parham_ste01"><img src="https://img.shields.io/badge/Telegram-کانال%20اصلی-ff2d3d?style=for-the-badge&logo=telegram&logoColor=white"></a>
 <a href="https://t.me/+SchgZ4s1dGU4N2Y0"><img src="https://img.shields.io/badge/Telegram-گروه%20پشتیبانی-111111?style=for-the-badge&logo=telegram&logoColor=white"></a>
@@ -17,10 +22,11 @@
 
 ---
 
-## 🌓 فارسی | English
+<a id="-فارسی"></a>
 
-<details open>
-<summary><b>🇮🇷 فارسی — آموزش خیلی ساده</b></summary>
+# 🇮🇷 فارسی
+
+<a href="#-english">🇬🇧 رفتن به بخش English</a>
 
 ## ✦ فهرست آموزش‌ها
 
@@ -35,29 +41,32 @@
 | 07 | اتصال Cloudflare API |
 | 08 | ساخت خودکار D1 و KV از بخش API |
 | 09 | قابلیت‌های اصلی پنل |
-| 10 | لینک `/banner/` |
-| 11 | رفع خطاهای رایج |
-| 12 | حمایت از پروژه ❤️ |
+| 10 | رفع خطاهای رایج |
+| 11 | حمایت از پروژه ❤️ |
 
 ---
 
 # 🚀 01 — ساخت Worker
 
-### قدم ۱
+### مرحله ۱
 
-وارد Cloudflare شو:
+وارد **Cloudflare Dashboard** شو.
 
-**Dashboard → Workers & Pages**
+### مرحله ۲
 
-### قدم ۲
+برو به:
 
-روی:
+```text
+Workers & Pages
+```
 
-**Create → Worker**
+بعد بزن:
 
-بزن.
+```text
+Create → Worker
+```
 
-### قدم ۳
+### مرحله ۳
 
 یک اسم برای Worker انتخاب کن.
 
@@ -67,55 +76,41 @@
 parham-panel
 ```
 
-بعد Worker را بساز و وارد **Edit code** شو.
+### مرحله ۴
 
-### قدم ۴
+وارد **Edit code** شو.
 
-کد پیش‌فرض Cloudflare را پاک کن.
+کد پیش‌فرض را پاک کن.
 
-فایل زیر را باز کن:
+حالا فایل <a href="https://github.com/parham-01/free-vpn-cludflare/blob/main/worker.js"><b>worker.js</b></a> را باز کن، کل کد را Copy کن و داخل **Edit code** قرار بده.
 
-```text
-worker.js
-```
+### مرحله ۵
 
-کل کد آن را Copy کن و داخل **Edit code** قرار بده.
-
-### قدم ۵
-
-روی:
+بزن:
 
 ```text
 Save and Deploy
 ```
 
-بزن.
-
-تمام.
-
 ---
 
-> ### 💡 نکته مهم — بعد از ساخت Worker
->
-> حالا وارد Worker شو و **پنل را باز کن**:
->
-> ```text
-> https://YOUR-WORKER.workers.dev/panel/
-> ```
->
-> بعد از ورود به پنل، برو به:
->
-> **API**
->
-> و آموزش همان بخش را انجام بده.
->
-> ساخت و اتصال **Cloudflare API، D1 و KV** از مسیر API پنل انجام می‌شود؛ لازم نیست قبل از آن جداگانه D1 و KV بسازی.
+# ⚠️ بعد از ساخت Worker
+
+بعد از اینکه Worker ساخته و Deploy شد، **حتماً در آخر آدرس Worker این را بنویس:**
+
+```text
+/panel/
+```
+
+مثلاً:
+
+```text
+https://YOUR-WORKER.workers.dev/panel/
+```
 
 ---
 
 # 👤 02 — اولین ورود
-
-خیلی ساده:
 
 ```text
 /panel/
@@ -129,15 +124,27 @@ Save and Deploy
 ورود به پنل
 ```
 
-ثبت‌نام که کامل شد، رمز پنل را تعیین می‌کنی و وارد پنل می‌شوی.
+---
+
+# ☁️ 03 — Cloudflare API
+
+بعد از ساخت Worker و ورود به پنل برو به:
+
+```text
+Panel → API
+```
+
+راهنمای ساخت و اتصال **Cloudflare API** داخل همین بخش قرار دارد.
+
+از همین قسمت برای راه‌اندازی منابع موردنیاز مثل **D1 و KV** استفاده کن.
+
+> 🔐 **API Token خودت را برای شخص دیگری ارسال نکن.**
 
 ---
 
-# ⚙️ 03 — قابلیت‌های اصلی پنل
+# ⚙️ 04 — قابلیت‌های اصلی پنل
 
-پنل برای مدیریت یک‌جا ساخته شده و بخش‌های اصلی آن شامل این موارد است:
-
-- ◉ داشبورد و وضعیت سیستم
+- ◉ Dashboard و وضعیت سیستم
 - ◉ ساخت و مدیریت Configuration
 - ◉ مدیریت کاربران
 - ◉ مدیریت Bot
@@ -146,81 +153,19 @@ Save and Deploy
 - ◉ اعلان‌ها
 - ◉ تنظیمات پنل
 - ◉ مشاهده وضعیت مصرف و منابع
-- ◉ لینک Subscription و QR برای کانفیگ‌ها
+- ◉ Subscription و QR کانفیگ‌ها
 
 ---
 
-# ☁️ 04 — Cloudflare API
+# 🛠️ 05 — اگر چیزی کار نکرد
 
-بعد از ساخت Worker و ورود به پنل:
-
-```text
-Panel
-  ↓
-API
-```
-
-وارد بخش **API** شو.
-
-راهنمای داخل خود پنل مرحله‌به‌مرحله مسیر ساخت Token و اتصال Cloudflare را نشان می‌دهد.
-
-پس ترتیب کار این است:
+این موارد را بررسی کن:
 
 ```text
-ساخت Worker
-      ↓
-Deploy
-      ↓
-/panel/
-      ↓
-ثبت‌نام خودکار
-      ↓
-تعیین رمز
-      ↓
-ورود
-      ↓
-API
-      ↓
-ساخت / اتصال D1 و KV
-```
-
-> 🔐 **API Token را در اختیار شخص دیگری قرار نده.**
-
----
-
-# 🖼️ 05 — Banner
-
-بنر پروژه در GitHub قرار دارد:
-
-**`/banner/banner.jpg`**
-
-و Worker هم مسیر زیر را برای نمایش همان فایل دارد:
-
-```text
-/banner/
-```
-
-یا مستقیم:
-
-```text
-/banner/banner.jpg
-```
-
-منبع GitHub:
-
-<a href="https://github.com/parham-01/free-vpn-cludflare/tree/main/banner">📁 مشاهده پوشه Banner در GitHub</a>
-
----
-
-# 🛠️ 06 — اگر چیزی کار نکرد
-
-اول این‌ها را بررسی کن:
-
-```text
-1. worker.js کامل آپلود شده باشد
+1. worker.js کامل قرار گرفته باشد
 2. Save and Deploy زده باشی
-3. آدرس /panel/ را باز کرده باشی
-4. از داخل پنل وارد API شده باشی
+3. بعد از ساخت Worker آدرس /panel/ را باز کرده باشی
+4. داخل پنل به بخش API رفته باشی
 5. مراحل API را کامل کرده باشی
 ```
 
@@ -243,56 +188,92 @@ API
 ### 💬 گروه پشتیبانی
 
 <a href="https://t.me/+SchgZ4s1dGU4N2Y0">
-<img src="https://img.shields.io/badge/💬%20ورود%20به%20گروه-ff2d3d?style=for-the-badge&labelColor=090909">
+<img src="https://img.shields.io/badge/💬%20ورود%20به%20گروه-2f81f7?style=for-the-badge&labelColor=090909">
 </a>
-
-<br><br>
-
-<sub>با حمایت شما توسعه و آپدیت پروژه ادامه پیدا می‌کند.</sub>
 
 </div>
 
-</details>
+---
 
-<details>
-<summary><b>🇬🇧 English — Simple Guide</b></summary>
+<a id="-english"></a>
 
-# 🚀 Create the Worker
+# 🇬🇧 English
 
-1. Open **Cloudflare Dashboard**.
-2. Go to **Workers & Pages**.
-3. Select **Create → Worker**.
-4. Choose a Worker name, for example:
+<a href="#-فارسی">🇮🇷 Go to Persian</a>
+
+## ✦ Guide
+
+| # | Guide |
+|---:|---|
+| 01 | Create a Cloudflare account |
+| 02 | Create a Worker |
+| 03 | Add `worker.js` |
+| 04 | Deploy the Worker |
+| 05 | First registration |
+| 06 | Open the panel |
+| 07 | Connect Cloudflare API |
+| 08 | Create D1 and KV from the API section |
+| 09 | Main panel features |
+| 10 | Common fixes |
+| 11 | Support the project ❤️ |
+
+---
+
+# 🚀 01 — Create the Worker
+
+### Step 1
+
+Open **Cloudflare Dashboard**.
+
+### Step 2
+
+Go to:
+
+```text
+Workers & Pages
+```
+
+Then:
+
+```text
+Create → Worker
+```
+
+### Step 3
+
+Choose a Worker name, for example:
 
 ```text
 parham-panel
 ```
 
-5. Open **Edit code**.
-6. Remove the default code.
-7. Copy all content from `worker.js`.
-8. Paste it into the Worker editor.
-9. Click **Save and Deploy**.
+### Step 4
 
-### Important
+Open **Edit code** and remove the default code.
 
-After creating and deploying the Worker, open:
+Open <a href="https://github.com/parham-01/free-vpn-cludflare/blob/main/worker.js"><b>worker.js</b></a>, copy all of its code and paste it into the Worker editor.
+
+### Step 5
+
+Click:
+
+```text
+Save and Deploy
+```
+
+---
+
+# ⚠️ After creating the Worker
+
+After the Worker is created and deployed, **add `/panel/` to the Worker URL:**
 
 ```text
 https://YOUR-WORKER.workers.dev/panel/
 ```
 
-Then complete registration and login.
+---
 
-After login, open:
-
-```text
-Panel → API
-```
-
-Use the instructions inside the API section to create/connect the Cloudflare API and set up the required D1/KV resources.
-
-## First Login
+# 👤 02 — First Login
 
 ```text
 /panel/
@@ -308,46 +289,70 @@ Login
 Panel
 ```
 
-## Main Features
+---
 
-- Dashboard
-- Configuration management
-- User management
-- Bot management
-- Cloudflare API
-- Worker updates
-- Notifications
-- Settings
-- Usage and resource status
-- Subscription links and QR codes
+# ☁️ 03 — Cloudflare API
 
-## Banner
-
-The project banner is stored at:
+After creating the Worker and opening the panel, go to:
 
 ```text
-/banner/banner.jpg
+Panel → API
 ```
 
-The Worker also exposes it at:
+The API section contains the instructions for creating and connecting the **Cloudflare API**.
+
+Use this section to set up required resources such as **D1 and KV**.
+
+> 🔐 **Never share your API Token with anyone.**
+
+---
+
+# ⚙️ 04 — Main Panel Features
+
+- ◉ Dashboard and system status
+- ◉ Configuration management
+- ◉ User management
+- ◉ Bot management
+- ◉ Cloudflare API
+- ◉ Worker management and updates
+- ◉ Notifications
+- ◉ Panel settings
+- ◉ Usage and resource status
+- ◉ Subscription and configuration QR codes
+
+---
+
+# 🛠️ 05 — Common Fixes
+
+Check these first:
 
 ```text
-/banner/
+1. worker.js was pasted completely
+2. Save and Deploy was completed
+3. /panel/ was added after creating the Worker
+4. The API section was opened
+5. The API setup was completed
 ```
 
-GitHub folder:
+---
 
-<a href="https://github.com/parham-01/free-vpn-cludflare/tree/main/banner">Open Banner Folder</a>
+# ❤️ Support the Project
 
-## Support
+<div align="center">
 
-<a href="https://t.me/parham_ste01">Telegram Channel</a>
+## If this project helped you, please support it ❤️
 
-<br>
+<a href="https://t.me/parham_ste01">
+<img src="https://img.shields.io/badge/🚀%20Telegram%20Channel-ff2d3d?style=for-the-badge&labelColor=090909">
+</a>
 
-<a href="https://t.me/+SchgZ4s1dGU4N2Y0">Support Group</a>
+<br><br>
 
-</details>
+<a href="https://t.me/+SchgZ4s1dGU4N2Y0">
+<img src="https://img.shields.io/badge/💬%20Support%20Group-2f81f7?style=for-the-badge&labelColor=090909">
+</a>
+
+</div>
 
 ---
 
